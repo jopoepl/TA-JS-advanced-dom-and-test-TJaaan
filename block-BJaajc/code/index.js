@@ -5,9 +5,11 @@ function getFullName (fn, ln){
 function isPalindrome(str){
     let input = str.split(``)
     let output = input.reverse();
-    return input === output;
-
-
+    let reversedStr = output.reduce((acc, cv) => {
+        acc += cv
+        return acc;
+    }, ``)
+     return reversedStr.toUpperCase() === str.toUpperCase();
 }
 
 function getCircumference (radius){
